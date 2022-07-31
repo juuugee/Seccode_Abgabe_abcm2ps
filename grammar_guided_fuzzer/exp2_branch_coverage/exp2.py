@@ -7,17 +7,25 @@ import os
 import time
 
 
-
 def run_grammar_guided_branch_coverage_fuzzer(run_time_in_min, dir_path_git, seed_path):
-    timeout = 60*run_time_in_min
+    timeout = 60 * run_time_in_min
     delete_coverage_files(dir_path=dir_path_git)
     Grammar_Seeds(path_seeds=seed_path, number_seeds=30)
     print("Grammar_seeds ready")
-    exe_path = fuzz_compile(dir_path=dir_path_git, exec_name="guided_branch_grammar_mutation_fuzzer")
-    mutation_based_fuzzer = MutationFuzzer_coverage(path_seeds=seed_path, min_mutations=1, max_mutations=3)
+    exe_path = fuzz_compile(
+        dir_path=dir_path_git, exec_name="guided_branch_grammar_mutation_fuzzer"
+    )
+    mutation_based_fuzzer = MutationFuzzer_coverage(
+        path_seeds=seed_path, min_mutations=1, max_mutations=3
+    )
     runner_fuzzing_grammar = ProgrammCoverageRunner(program=exe_path)
     timeout_start = time.time()
     while time.time() < timeout_start + timeout:
-        result, outcome, mutated_seed, coverage = mutation_based_fuzzer.run_branch_coverage(runner=runner_fuzzing_grammar)
-    logger = Logger(fuzzer= mutation_based_fuzzer, runner = runner_fuzzing_grammar)
+        (
+            result,
+            outcome,
+            mutated_seed,
+            coverage,
+        ) = mutation_based_fuzzer.run_branch_coverage(runner=runner_fuzzing_grammar)
+    logger = Logger(fuzzer=mutation_based_fuzzer, runner=runner_fuzzing_grammar)
     logger.plot(path=os.path.abspath(os.path.join(seed_path, os.pardir)))

@@ -1,10 +1,11 @@
 import random
 
-def flip_random_character(s:str)->str:
+
+def flip_random_character(s: str) -> str:
     """
     description: Returns input with a random bit flipped in a random position
 
-    input: 
+    input:
     s(str): string, where a random bit flipped in a random position
 
     output:
@@ -18,14 +19,15 @@ def flip_random_character(s:str)->str:
     bit = 1 << random.randint(0, 6)
     new_c = chr(ord(c) ^ bit)
     # print("Flipping", bit, "in", repr(c) + ", giving", repr(new_c))
-    return_string = s[:pos] + new_c + s[pos + 1:]
+    return_string = s[:pos] + new_c + s[pos + 1 :]
     return return_string
 
-def insert_random_character(s:str)->str:
+
+def insert_random_character(s: str) -> str:
     """
     description: Returns input with a random character inserted
 
-    input: 
+    input:
     s(str): string, where a random character is inserted
 
     output:
@@ -37,11 +39,11 @@ def insert_random_character(s:str)->str:
     return return_string
 
 
-def delete_random_character(s:str)->str:
+def delete_random_character(s: str) -> str:
     """
     description: Returns input with a random character deleted
 
-    input: 
+    input:
     s(str): string, where a random character deleted
 
     output:
@@ -51,5 +53,5 @@ def delete_random_character(s:str)->str:
         return s
 
     pos = random.randint(0, len(s) - 1)
-    return_string =  s[:pos] + s[pos + 1:]
+    return_string = s[:pos] + s[pos + 1 :]
     return return_string

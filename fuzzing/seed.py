@@ -2,9 +2,10 @@ import glob
 import os
 from fuzzing.grammar import simple_grammar_fuzzer, SIMPLE_ABC_GRAMMAR, START_SYMBOL
 
-class Seeds():
-    def __init__(self, path_seeds:str):
-        """ init with Path to the /in dir, where all seeds are saved """
+
+class Seeds:
+    def __init__(self, path_seeds: str):
+        """init with Path to the /in dir, where all seeds are saved"""
         self.path = path_seeds
         self.names = []
         self.content = []
@@ -26,22 +27,22 @@ class Seeds():
         for file in glob.glob(search_path):
             self.names.append(file)
         for file in self.names:
-            with open(file, 'r') as f:
-                    self.content.append(f.read())
+            with open(file, "r") as f:
+                self.content.append(f.read())
 
-
-    def return_seeds(self)->list:
-        """ returns content to the specified dir """
+    def return_seeds(self) -> list:
+        """returns content to the specified dir"""
         search_path = os.path.join(self.path, "*")
         for file in glob.glob(search_path):
             self.names.append(file)
         for file in self.names:
-            with open(file, 'r') as f:
-                    self.content.append(f.read())
+            with open(file, "r") as f:
+                self.content.append(f.read())
         return self.content
 
-class Grammar_Seeds():
-    def __init__(self, path_seeds:str, number_seeds):
+
+class Grammar_Seeds:
+    def __init__(self, path_seeds: str, number_seeds):
         self.number_seeds = number_seeds
         self.path = path_seeds
         if not os.path.exists(self.path):
@@ -53,10 +54,11 @@ class Grammar_Seeds():
     def generate_seeds(self):
         for i in range(self.number_seeds):
             actual_name = "gammar" + str(i) + ".abc"
-            path_name = os.path.join(self.path , actual_name)
+            path_name = os.path.join(self.path, actual_name)
             self.names.append(actual_name)
-            grammar_seed = simple_grammar_fuzzer(grammar= SIMPLE_ABC_GRAMMAR, start_symbol=START_SYMBOL)
+            grammar_seed = simple_grammar_fuzzer(
+                grammar=SIMPLE_ABC_GRAMMAR, start_symbol=START_SYMBOL
+            )
             self.content.append(grammar_seed)
-            with open(path_name, 'w') as f:
+            with open(path_name, "w") as f:
                 f.write(grammar_seed)
-        

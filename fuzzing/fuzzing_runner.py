@@ -3,6 +3,7 @@ from fuzzingbook.Fuzzer import Runner
 from fuzzing.fuzzing_coverage import call_gcov
 import time
 
+
 class ProgramRunner(Runner):
     def __init__(self, program):
         """Initialize.  `program` is a program spec as passed to `subprocess.run()`"""
@@ -25,23 +26,25 @@ class ProgramRunner(Runner):
         """
         description: Run the program at specified programm_path with inputfile_path as `inp` as input with subprocess.run()
 
-        input: 
+        input:
         inp(str): path to the input file
 
         output:
         subprocess
         """
         exec_array = [self.program_path, inp]
-        return subprocess.run(exec_array,
-                              stdout=subprocess.PIPE,
-                              stderr=subprocess.PIPE,
-                              universal_newlines=True)
+        return subprocess.run(
+            exec_array,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            universal_newlines=True,
+        )
 
     def run(self, inp=""):
         """
         description: Run the program at specified programm_path with inputfile_path as `inp` as input with subprocess.run() and evalute subprocess.run()
 
-        input: 
+        input:
         inp(str): path to the input file
 
         output:
@@ -92,16 +95,15 @@ class ProgramRunner(Runner):
 
     def return_timestamp(self):
         return self.time_stamp
-    
+
     def return_outcomes(self):
         return self.passes, self.crashes, self.unresolved
 
     def return_failed_seeds(self):
         return self.fail_seed_list
 
+
 class ProgrammCoverageRunner(ProgramRunner):
-
-
     def return_actual_line_coverage(self):
         return self.line_coverage[-1]
 
