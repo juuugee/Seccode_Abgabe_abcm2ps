@@ -1,0 +1,12 @@
+/abcm2ps
+__pychache__
+Out.ps
+in_mutated
+__pycache__
+__pycache__/
+in_grammar
+in_mutated_grammar
+in
+*.svg
+info.txt
+failed_seeds.txt
