@@ -1,0 +1,149 @@
+julius@LAPTOP-14S7OJ1N:/mnt/d/Projekte/seccode/sparse_check$ sparse -Wsparse-all *.c
+abcm2ps.h:493:3: warning: symbol 'parse' was not declared. Should it be static?
+abcm2ps.h:731:15: warning: symbol 'cursys' was not declared. Should it be static?
+abcm2ps.h:766:5: warning: symbol 'output' was not declared. Should it be static?
+abcm2ps.c:34:15: warning: symbol 'sym' was not declared. Should it be static?
+abcm2ps.c:162:32: warning: Using plain integer as NULL pointer
+abcm2ps.c:548:32: warning: Using plain integer as NULL pointer
+abcm2ps.c:795:56: warning: Using plain integer as NULL pointer
+abcm2ps.c:1065:26: warning: Using plain integer as NULL pointer
+abcm2ps.c:1104:38: warning: Using plain integer as NULL pointer
+abcm2ps.c:1106:37: warning: Using plain integer as NULL pointer
+abcparse.c:1497:22: warning: symbol 'q' shadows an earlier one
+abcparse.c:1407:14: originally declared here
+abcparse.c:2144:62: warning: potentially expensive pointer subtraction
+abcparse.c:2144:62:     'struct VOICE_S' has a non-power-of-2 size: 408
+abcparse.c:2187:62: warning: potentially expensive pointer subtraction
+abcparse.c:2187:62:     'struct VOICE_S' has a non-power-of-2 size: 408
+abcparse.c:2625:31: warning: potentially expensive pointer subtraction
+abcparse.c:2625:31:     'struct VOICE_S' has a non-power-of-2 size: 408
+abcparse.c:2630:51: warning: Using plain integer as NULL pointer
+abcparse.c:189:61: warning: Using plain integer as NULL pointer
+abcparse.c:1015:16: warning: Using plain integer as NULL pointer
+abcparse.c:1148:16: warning: Using plain integer as NULL pointer
+abcparse.c:1205:24: warning: Using plain integer as NULL pointer
+abcparse.c:1207:16: warning: Using plain integer as NULL pointer
+abcparse.c:1240:10: warning: Using plain integer as NULL pointer
+buffer.c:441:20: warning: potentially expensive pointer subtraction
+buffer.c:441:20:     'struct FONTSPEC' has a non-power-of-2 size: 12
+buffer.c:443:19: warning: potentially expensive pointer subtraction
+buffer.c:443:19:     'struct FONTSPEC' has a non-power-of-2 size: 12
+deco.c:1374:30: warning: symbol 'p' shadows an earlier one
+deco.c:1271:19: originally declared here
+deco.c:183:9: warning: Using plain integer as NULL pointer
+deco.c:842:41: warning: Using plain integer as NULL pointer
+deco.c:1483:28: warning: potentially expensive pointer subtraction
+deco.c:1483:28:     'struct deco_def_s' has a non-power-of-2 size: 24
+deco.c:1695:24: warning: Using plain integer as NULL pointer
+deco.c:1824:24: warning: Using plain integer as NULL pointer
+draw.c:2676:23: warning: symbol 'a' shadows an earlier one
+draw.c:2560:39: originally declared here
+draw.c:3723:29: warning: potentially expensive pointer subtraction
+draw.c:3723:29:     'struct FONTSPEC' has a non-power-of-2 size: 12
+draw.c:3793:41: warning: potentially expensive pointer subtraction
+draw.c:3793:41:     'struct VOICE_S' has a non-power-of-2 size: 408
+draw.c:3903:33: warning: potentially expensive pointer subtraction
+draw.c:3903:33:     'struct VOICE_S' has a non-power-of-2 size: 408
+draw.c:3979:33: warning: potentially expensive pointer subtraction
+draw.c:3979:33:     'struct VOICE_S' has a non-power-of-2 size: 408
+draw.c:4045:45: warning: potentially expensive pointer subtraction
+draw.c:4045:45:     'struct VOICE_S' has a non-power-of-2 size: 408
+draw.c:4242:47: warning: potentially expensive pointer subtraction
+draw.c:4242:47:     'struct VOICE_S' has a non-power-of-2 size: 408
+draw.c:4344:53: warning: potentially expensive pointer subtraction
+draw.c:4344:53:     'struct VOICE_S' has a non-power-of-2 size: 408
+format.c:155:10: warning: Using plain integer as NULL pointer
+format.c:155:13: warning: Using plain integer as NULL pointer
+format.c:334:60: warning: Using plain integer as NULL pointer
+format.c:594:55: warning: Using plain integer as NULL pointer
+format.c:758:52: warning: Using plain integer as NULL pointer
+format.c:763:15: warning: potentially expensive pointer subtraction
+format.c:763:15:     'struct FONTSPEC' has a non-power-of-2 size: 12
+format.c:797:32: warning: Using plain integer as NULL pointer
+format.c:824:32: warning: Using plain integer as NULL pointer
+format.c:854:24: warning: Using plain integer as NULL pointer
+format.c:911:16: warning: Using plain integer as NULL pointer
+format.c:1156:56: warning: Using plain integer as NULL pointer
+format.c:1376:25: warning: Using plain integer as NULL pointer
+front.c:312:45: warning: Using plain integer as NULL pointer
+front.c:315:42: warning: Using plain integer as NULL pointer
+front.c:409:54: warning: Using plain integer as NULL pointer
+glyph.c:219:27: warning: Using plain integer as NULL pointer
+music.c:998:51: warning: Using plain integer as NULL pointer
+music.c:2176:29: warning: potentially expensive pointer subtraction
+music.c:2176:29:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:2514:33: warning: potentially expensive pointer subtraction
+music.c:2514:33:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:2534:33: warning: potentially expensive pointer subtraction
+music.c:2534:33:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:2566:49: warning: potentially expensive pointer subtraction
+music.c:2566:49:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:2592:49: warning: potentially expensive pointer subtraction
+music.c:2592:49:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:2688:33: warning: potentially expensive pointer subtraction
+music.c:2688:33:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:3154:28: warning: potentially expensive pointer subtraction
+music.c:3154:28:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:3190:33: warning: potentially expensive pointer subtraction
+music.c:3190:33:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:3218:33: warning: potentially expensive pointer subtraction
+music.c:3218:33:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:3275:33: warning: potentially expensive pointer subtraction
+music.c:3275:33:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:3298:41: warning: potentially expensive pointer subtraction
+music.c:3298:41:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:3322:33: warning: potentially expensive pointer subtraction
+music.c:3322:33:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:3623:33: warning: potentially expensive pointer subtraction
+music.c:3623:33:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:4782:33: warning: potentially expensive pointer subtraction
+music.c:4782:33:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:5013:33: warning: potentially expensive pointer subtraction
+music.c:5013:33:     'struct VOICE_S' has a non-power-of-2 size: 408
+music.c:5126:26: warning: Using plain integer as NULL pointer
+parse.c:5546:30: warning: symbol 'q' shadows an earlier one
+parse.c:5053:25: originally declared here
+parse.c:5945:30: warning: symbol 'q' shadows an earlier one
+parse.c:5053:25: originally declared here
+parse.c:4168:33: warning: Using plain integer as NULL pointer
+parse.c:4172:33: warning: Using plain integer as NULL pointer
+parse.c:5264:48: warning: potentially expensive pointer subtraction
+parse.c:5264:48:     'struct VOICE_S' has a non-power-of-2 size: 408
+parse.c:5577:48: warning: potentially expensive pointer subtraction
+parse.c:5577:48:     'struct VOICE_S' has a non-power-of-2 size: 408
+parse.c:5616:37: warning: Using plain integer as NULL pointer
+parse.c:3376:45: warning: Using plain integer as NULL pointer
+parse.c:3378:46: warning: Using plain integer as NULL pointer
+parse.c:3386:42: warning: Using plain integer as NULL pointer
+parse.c:132:28: warning: potentially expensive pointer subtraction
+parse.c:132:28:     'struct VOICE_S' has a non-power-of-2 size: 408
+parse.c:224:29: warning: potentially expensive pointer subtraction
+parse.c:224:29:     'struct VOICE_S' has a non-power-of-2 size: 408
+parse.c:243:49: warning: potentially expensive pointer subtraction
+parse.c:243:49:     'struct VOICE_S' has a non-power-of-2 size: 408
+parse.c:799:41: warning: potentially expensive pointer subtraction
+parse.c:799:41:     'struct VOICE_S' has a non-power-of-2 size: 408
+parse.c:826:33: warning: potentially expensive pointer subtraction
+parse.c:826:33:     'struct VOICE_S' has a non-power-of-2 size: 408
+parse.c:1045:33: warning: potentially expensive pointer subtraction
+parse.c:1045:33:     'struct VOICE_S' has a non-power-of-2 size: 408
+parse.c:2006:38: warning: potentially expensive pointer subtraction
+parse.c:2006:38:     'struct VOICE_S' has a non-power-of-2 size: 408
+parse.c:2046:47: warning: potentially expensive pointer subtraction
+parse.c:2046:47:     'struct VOICE_S' has a non-power-of-2 size: 408
+parse.c:2073:25: warning: potentially expensive pointer subtraction
+parse.c:2073:25:     'struct VOICE_S' has a non-power-of-2 size: 408
+parse.c:2330:44: warning: potentially expensive pointer subtraction
+parse.c:2330:44:     'struct VOICE_S' has a non-power-of-2 size: 408
+parse.c:2527:32: warning: Using plain integer as NULL pointer
+parse.c:2528:33: warning: Using plain integer as NULL pointer
+parse.c:3517:52: warning: potentially expensive pointer subtraction
+parse.c:3517:52:     'struct VOICE_S' has a non-power-of-2 size: 408
+parse.c:3540:39: warning: potentially expensive pointer subtraction
+parse.c:3540:39:     'struct VOICE_S' has a non-power-of-2 size: 408
+parse.c:4747:32: warning: Using plain integer as NULL pointer
+subs.c:1213:13: warning: Using plain integer as NULL pointer
+subs.c:1228:18: warning: Using plain integer as NULL pointer
+subs.c:1239:35: warning: Using plain integer as NULL pointer
+subs.c:1259:30: warning: Using plain integer as NULL pointer
+subs.c:1552:34: warning: too many warnings

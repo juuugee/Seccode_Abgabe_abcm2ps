@@ -1,0 +1,1543 @@
+julius@LAPTOP-14S7OJ1N:/mnt/d/Projekte/seccode/gcc_check$ make
+gcc -Wall -Wextra -pedantic  -I.  -c -o abcm2ps.o abcm2ps.c
+abcm2ps.c: In function ‘main’:
+abcm2ps.c:614:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  614 |     usage(); /* no return */
+      |     ^~~~~~~
+abcm2ps.c:615:4: note: here
+  615 |    case 'p':
+      |    ^~~~
+gcc -Wall -Wextra -pedantic  -I.  -c -o abcparse.o abcparse.c
+abcparse.c: In function ‘parse_tempo’:
+abcparse.c:1095:11: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+ 1095 |      || i >= sizeof s->u.tempo.beats
+      |           ^~
+abcparse.c: In function ‘parse_line’:
+abcparse.c:1867:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+ 1867 |     for (i = 0; i < sizeof char_tb; i++) {
+      |                   ^
+abcparse.c: In function ‘parse_clef’:
+abcparse.c:460:14: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  460 |    transpose = -7;
+      |    ~~~~~~~~~~^~~~
+abcparse.c:461:3: note: here
+  461 |   case 'G':
+      |   ^~~~
+abcparse.c:478:14: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  478 |    transpose = -7;
+      |    ~~~~~~~~~~^~~~
+abcparse.c:479:3: note: here
+  479 |   case 'C':
+      |   ^~~~
+abcparse.c:543:15: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  543 |     transpose -= 7;
+      |     ~~~~~~~~~~^~~~
+abcparse.c:544:4: note: here
+  544 |    case '+':
+      |    ^~~~
+abcparse.c:548:15: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  548 |     transpose += 7;
+      |     ~~~~~~~~~~^~~~
+abcparse.c:549:4: note: here
+  549 |    case '-':
+      |    ^~~~
+abcparse.c: In function ‘parse_key’:
+abcparse.c:643:14: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  643 |  case 'B': sf++;
+      |            ~~^~
+abcparse.c:644:2: note: here
+  644 |  case 'E': sf++;
+      |  ^~~~
+abcparse.c:644:14: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  644 |  case 'E': sf++;
+      |            ~~^~
+abcparse.c:645:2: note: here
+  645 |  case 'A': sf++;
+      |  ^~~~
+abcparse.c:645:14: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  645 |  case 'A': sf++;
+      |            ~~^~
+abcparse.c:646:2: note: here
+  646 |  case 'D': sf++;
+      |  ^~~~
+abcparse.c:646:14: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  646 |  case 'D': sf++;
+      |            ~~^~
+abcparse.c:647:2: note: here
+  647 |  case 'G': sf++;
+      |  ^~~~
+abcparse.c: In function ‘parse_line’:
+abcparse.c:1839:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 1839 |    if (parse.last_sym
+      |       ^
+abcparse.c:1842:3: note: here
+ 1842 |   case ABC_S_HEAD: /*fixme: may have blank lines in headers?*/
+      |   ^~~~
+abcparse.c: In function ‘parse_note’:
+abcparse.c:2315:12: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 2315 |   s->flags |= ABC_F_INVIS;
+abcparse.c:2316:2: note: here
+ 2316 |  case 'Z':   /* multi-rest */
+      |  ^~~~
+gcc -Wall -Wextra -pedantic  -I.  -c -o buffer.o buffer.c
+buffer.c: In function ‘close_output_file’:
+buffer.c:293:3: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  293 |   fputs("</body>\n"
+      |   ^~~~~~~~~~~~~~~~~
+  294 |    "</html>\n", fout);
+      |    ~~~~~~~~~~~~~~~~~~
+buffer.c:295:2: note: here
+  295 |  case 3:    /* -z */
+      |  ^~~~
+gcc -Wall -Wextra -pedantic  -I.  -c -o deco.o deco.c
+deco.c: In function ‘write_tempo’:
+deco.c:2348:8: warning: unused parameter ‘beat’ [-Wunused-parameter]
+ 2348 |    int beat,
+      |    ~~~~^~~~
+gcc -Wall -Wextra -pedantic  -I.  -c -o draw.o draw.c
+draw.c: In function ‘output_ps’:
+draw.c:4631:38: warning: unused parameter ‘color’ [-Wunused-parameter]
+ 4631 | void output_ps(struct SYMBOL *s, int color)
+      |                                  ~~~~^~~~~
+draw.c: In function ‘setmap’:
+draw.c:3505:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3505 |  case 7: map[6] = A_SH;
+      |          ~~~~~~~^~~~~~
+draw.c:3506:2: note: here
+ 3506 |  case 6: map[2] = A_SH;
+      |  ^~~~
+draw.c:3506:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3506 |  case 6: map[2] = A_SH;
+      |          ~~~~~~~^~~~~~
+draw.c:3507:2: note: here
+ 3507 |  case 5: map[5] = A_SH;
+      |  ^~~~
+draw.c:3507:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3507 |  case 5: map[5] = A_SH;
+      |          ~~~~~~~^~~~~~
+draw.c:3508:2: note: here
+ 3508 |  case 4: map[1] = A_SH;
+      |  ^~~~
+draw.c:3508:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3508 |  case 4: map[1] = A_SH;
+      |          ~~~~~~~^~~~~~
+draw.c:3509:2: note: here
+ 3509 |  case 3: map[4] = A_SH;
+      |  ^~~~
+draw.c:3509:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3509 |  case 3: map[4] = A_SH;
+      |          ~~~~~~~^~~~~~
+draw.c:3510:2: note: here
+ 3510 |  case 2: map[0] = A_SH;
+      |  ^~~~
+draw.c:3510:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3510 |  case 2: map[0] = A_SH;
+      |          ~~~~~~~^~~~~~
+draw.c:3511:2: note: here
+ 3511 |  case 1: map[3] = A_SH;
+      |  ^~~~
+draw.c:3513:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3513 |  case -7: map[3] = A_FT;
+      |           ~~~~~~~^~~~~~
+draw.c:3514:2: note: here
+ 3514 |  case -6: map[0] = A_FT;
+      |  ^~~~
+draw.c:3514:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3514 |  case -6: map[0] = A_FT;
+      |           ~~~~~~~^~~~~~
+draw.c:3515:2: note: here
+ 3515 |  case -5: map[4] = A_FT;
+      |  ^~~~
+draw.c:3515:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3515 |  case -5: map[4] = A_FT;
+      |           ~~~~~~~^~~~~~
+draw.c:3516:2: note: here
+ 3516 |  case -4: map[1] = A_FT;
+      |  ^~~~
+draw.c:3516:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3516 |  case -4: map[1] = A_FT;
+      |           ~~~~~~~^~~~~~
+draw.c:3517:2: note: here
+ 3517 |  case -3: map[5] = A_FT;
+      |  ^~~~
+draw.c:3517:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3517 |  case -3: map[5] = A_FT;
+      |           ~~~~~~~^~~~~~
+draw.c:3518:2: note: here
+ 3518 |  case -2: map[2] = A_FT;
+      |  ^~~~
+draw.c:3518:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3518 |  case -2: map[2] = A_FT;
+      |           ~~~~~~~^~~~~~
+draw.c:3519:2: note: here
+ 3519 |  case -1: map[6] = A_FT;
+      |  ^~~~
+gcc -Wall -Wextra -pedantic  -I.  -c -o format.o format.c
+format.c:45:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   45 |  {"abc2pscompat", &cfmt.abc2pscompat, FORMAT_B, 3},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:46:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   46 |  {"alignbars", &cfmt.alignbars, FORMAT_I, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:47:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   47 |  {"aligncomposer", &cfmt.aligncomposer, FORMAT_I, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:48:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   48 |  {"annotationfont", &cfmt.font_tb[ANNOTATIONFONT], FORMAT_F, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:49:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   49 |  {"autoclef", &cfmt.autoclef, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:50:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   50 |  {"barsperstaff", &cfmt.barsperstaff, FORMAT_I, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:51:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   51 |  {"bgcolor", &cfmt.bgcolor, FORMAT_S, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:52:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   52 |  {"botmargin", &cfmt.botmargin, FORMAT_U, 1},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:53:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   53 |  {"breaklimit", &cfmt.breaklimit, FORMAT_R, 3},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:54:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   54 |  {"breakoneoln", &cfmt.breakoneoln, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:55:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   55 |  {"bstemdown", &cfmt.bstemdown, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:56:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   56 |  {"cancelkey", &cfmt.cancelkey, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:57:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   57 |  {"capo", &cfmt.capo, FORMAT_I, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:58:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   58 |  {"combinevoices", &cfmt.combinevoices, FORMAT_I, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:59:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   59 |  {"composerfont", &cfmt.font_tb[COMPOSERFONT], FORMAT_F, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:60:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   60 |  {"composerspace", &cfmt.composerspace, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:61:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   61 |  {"contbarnb", &cfmt.contbarnb, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:62:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   62 |  {"continueall", &cfmt.continueall, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:63:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   63 |  {"custos", &cfmt.custos, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:64:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   64 |  {"dateformat", &cfmt.dateformat, FORMAT_S, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:65:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   65 |  {"dblrepbar", &cfmt.dblrepbar, FORMAT_I, 2},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:66:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   66 |  {"decoerr", &cfmt.decoerr, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:67:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   67 |  {"dynalign", &cfmt.dynalign, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:68:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   68 |  {"footer", &cfmt.footer, FORMAT_S, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:69:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   69 |  {"footerfont", &cfmt.font_tb[FOOTERFONT], FORMAT_F, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:70:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   70 |  {"flatbeams", &cfmt.flatbeams, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:71:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   71 |  {"gchordbox", &cfmt.gchordbox, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:72:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   72 |  {"gchordfont", &cfmt.font_tb[GCHORDFONT], FORMAT_F, 3},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:73:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   73 |  {"graceslurs", &cfmt.graceslurs, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:74:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   74 |  {"graceword", &cfmt.graceword, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:75:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   75 |  {"gracespace", &cfmt.gracespace, FORMAT_I, 5},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:76:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   76 |  {"gutter", &cfmt.gutter, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:77:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   77 |  {"header", &cfmt.header, FORMAT_S, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:78:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   78 |  {"headerfont", &cfmt.font_tb[HEADERFONT], FORMAT_F, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:79:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   79 |  {"historyfont", &cfmt.font_tb[HISTORYFONT], FORMAT_F, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:80:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   80 |  {"hyphencont", &cfmt.hyphencont, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:81:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   81 |  {"indent", &cfmt.indent, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:82:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   82 |  {"infofont", &cfmt.font_tb[INFOFONT], FORMAT_F, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:83:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   83 |  {"infoline", &cfmt.infoline, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:84:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   84 |  {"infospace", &cfmt.infospace, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:85:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   85 |  {"keywarn", &cfmt.keywarn, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:86:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   86 |  {"landscape", &cfmt.landscape, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:87:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   87 |  {"leftmargin", &cfmt.leftmargin, FORMAT_U, 1},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:88:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   88 |  {"lineskipfac", &cfmt.lineskipfac, FORMAT_R, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:89:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   89 |  {"linewarn", &cfmt.linewarn, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:90:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   90 |  {"maxshrink", &cfmt.maxshrink, FORMAT_R, 2},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:91:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   91 |  {"maxstaffsep", &cfmt.maxstaffsep, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:92:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   92 |  {"maxsysstaffsep", &cfmt.maxsysstaffsep, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:93:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   93 |  {"measurebox", &cfmt.measurebox, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:94:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   94 |  {"measurefirst", &cfmt.measurefirst, FORMAT_I, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:95:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   95 |  {"measurefont", &cfmt.font_tb[MEASUREFONT], FORMAT_F, 2},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:96:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   96 |  {"measurenb", &cfmt.measurenb, FORMAT_I, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:97:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   97 |  {"micronewps", &cfmt.micronewps, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:98:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   98 |  {"musicfont", &cfmt.musicfont, FORMAT_S, 1},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:99:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+   99 |  {"musicspace", &cfmt.musicspace, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:100:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  100 |  {"notespacingfactor", &cfmt.notespacingfactor, FORMAT_R, 1},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:101:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  101 |  {"oneperpage", &cfmt.oneperpage, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:102:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  102 |  {"pageheight", &cfmt.pageheight, FORMAT_U, 1},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:103:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  103 |  {"pagewidth", &cfmt.pagewidth, FORMAT_U, 1},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:104:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  104 |  {"pagescale", &cfmt.scale, FORMAT_R, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:108:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  108 |  {"parskipfac", &cfmt.parskipfac, FORMAT_R, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:109:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  109 |  {"partsbox", &cfmt.partsbox, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:110:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  110 |  {"partsfont", &cfmt.font_tb[PARTSFONT], FORMAT_F, 1},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:111:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  111 |  {"partsspace", &cfmt.partsspace, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:112:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  112 |  {"pdfmark", &cfmt.pdfmark, FORMAT_I, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:113:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  113 |  {"rbdbstop", &cfmt.rbdbstop, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:114:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  114 |  {"rbmax", &cfmt.rbmax, FORMAT_I, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:115:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  115 |  {"rbmin", &cfmt.rbmin, FORMAT_I, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:116:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  116 |  {"repeatfont", &cfmt.font_tb[REPEATFONT], FORMAT_F, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:117:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  117 |  {"rightmargin", &cfmt.rightmargin, FORMAT_U, 1},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:119:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  119 |  {"setdefl", &cfmt.setdefl, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:121:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  121 |  {"shiftunison", &cfmt.shiftunison, FORMAT_I, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:122:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  122 |  {"slurheight", &cfmt.slurheight, FORMAT_R, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:123:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  123 |  {"splittune", &cfmt.splittune, FORMAT_I, 1},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:124:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  124 |  {"squarebreve", &cfmt.squarebreve, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:125:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  125 |  {"staffnonote", &cfmt.staffnonote, FORMAT_I, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:126:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  126 |  {"staffsep", &cfmt.staffsep, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:127:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  127 |  {"staffwidth", &staffwidth, FORMAT_U, 2},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:128:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  128 |  {"stemheight", &cfmt.stemheight, FORMAT_R, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:129:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  129 |  {"straightflags", &cfmt.straightflags, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:130:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  130 |  {"stretchlast", &cfmt.stretchlast, FORMAT_R, 2},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:131:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  131 |  {"stretchstaff", &cfmt.stretchstaff, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:132:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  132 |  {"subtitlefont", &cfmt.font_tb[SUBTITLEFONT], FORMAT_F, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:133:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  133 |  {"subtitlespace", &cfmt.subtitlespace, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:134:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  134 |  {"sysstaffsep", &cfmt.sysstaffsep, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:135:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  135 |  {"tempofont", &cfmt.font_tb[TEMPOFONT], FORMAT_F, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:136:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  136 |  {"textfont", &cfmt.font_tb[TEXTFONT], FORMAT_F, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:137:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  137 |  {"textoption", &cfmt.textoption, FORMAT_I, 4},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:138:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  138 |  {"textspace", &cfmt.textspace, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:139:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  139 |  {"titlecaps", &cfmt.titlecaps, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:140:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  140 |  {"titlefont", &cfmt.font_tb[TITLEFONT], FORMAT_F, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:141:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  141 |  {"titleformat", &cfmt.titleformat, FORMAT_S, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:142:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  142 |  {"titleleft", &cfmt.titleleft, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:143:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  143 |  {"titlespace", &cfmt.titlespace, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:144:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  144 |  {"titletrim", &cfmt.titletrim, FORMAT_I, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:145:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  145 |  {"timewarn", &cfmt.timewarn, FORMAT_B, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:146:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  146 |  {"topmargin", &cfmt.topmargin, FORMAT_U, 1},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:147:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  147 |  {"topspace", &cfmt.topspace, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:148:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  148 |  {"tuplets", &cfmt.tuplets, FORMAT_I, 3},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:149:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  149 |  {"vocalfont", &cfmt.font_tb[VOCALFONT], FORMAT_F, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:150:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  150 |  {"vocalspace", &cfmt.vocalspace, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:151:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  151 |  {"voicefont", &cfmt.font_tb[VOICEFONT], FORMAT_F, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:152:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  152 |  {"wordsfont", &cfmt.font_tb[WORDSFONT], FORMAT_F, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:153:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  153 |  {"wordsspace", &cfmt.wordsspace, FORMAT_U, 0},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:154:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  154 |  {"writefields", &cfmt.fields, FORMAT_B, 1},
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:155:2: warning: missing initializer for field ‘lock’ of ‘struct format’ [-Wmissing-field-initializers]
+  155 |  {0, 0, 0, 0}  /* end of table */
+      |  ^
+format.c:43:8: note: ‘lock’ declared here
+   43 |  short lock;
+      |        ^~~~
+format.c:941:2: warning: ISO C forbids empty initializer braces [-Wpedantic]
+  941 |  {}
+      |  ^
+format.c: In function ‘interpret_fmt_line’:
+format.c:1241:20: warning: format ‘%d’ expects argument of type ‘int *’, but argument 3 has type ‘unsigned int *’ [-Wformat=]
+ 1241 |    if (sscanf(p, "%d %d %d %d", &i1, &i2, &i3, &i4) != 4
+      |                   ~^            ~~~
+      |                    |            |
+      |                    int *        unsigned int *
+      |                   %d
+format.c:1241:23: warning: format ‘%d’ expects argument of type ‘int *’, but argument 4 has type ‘unsigned int *’ [-Wformat=]
+ 1241 |    if (sscanf(p, "%d %d %d %d", &i1, &i2, &i3, &i4) != 4
+      |                      ~^              ~~~
+      |                       |              |
+      |                       int *          unsigned int *
+      |                      %d
+format.c:1241:26: warning: format ‘%d’ expects argument of type ‘int *’, but argument 5 has type ‘unsigned int *’ [-Wformat=]
+ 1241 |    if (sscanf(p, "%d %d %d %d", &i1, &i2, &i3, &i4) != 4
+      |                         ~^                ~~~
+      |                          |                |
+      |                          int *            unsigned int *
+      |                         %d
+format.c:1241:29: warning: format ‘%d’ expects argument of type ‘int *’, but argument 6 has type ‘unsigned int *’ [-Wformat=]
+ 1241 |    if (sscanf(p, "%d %d %d %d", &i1, &i2, &i3, &i4) != 4
+      |                            ~^                  ~~~
+      |                             |                  |
+      |                             int *              unsigned int *
+      |                            %d
+format.c:1242:20: warning: format ‘%d’ expects argument of type ‘int *’, but argument 3 has type ‘unsigned int *’ [-Wformat=]
+ 1242 |     && sscanf(p, "%d %d %d", &i1, &i2, &i3) != 3)
+      |                   ~^         ~~~
+      |                    |         |
+      |                    int *     unsigned int *
+      |                   %d
+format.c:1242:23: warning: format ‘%d’ expects argument of type ‘int *’, but argument 4 has type ‘unsigned int *’ [-Wformat=]
+ 1242 |     && sscanf(p, "%d %d %d", &i1, &i2, &i3) != 3)
+      |                      ~^           ~~~
+      |                       |           |
+      |                       int *       unsigned int *
+      |                      %d
+format.c:1242:26: warning: format ‘%d’ expects argument of type ‘int *’, but argument 5 has type ‘unsigned int *’ [-Wformat=]
+ 1242 |     && sscanf(p, "%d %d %d", &i1, &i2, &i3) != 3)
+      |                         ~^             ~~~
+      |                          |             |
+      |                          int *         unsigned int *
+      |                         %d
+gcc -Wall -Wextra -pedantic  -I.  -c -o front.o front.c
+front.c: In function ‘frontend’:
+front.c:684:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+  684 |     for (i = 0; i < sizeof prefix - 1; i++) {
+      |                   ^
+gcc -Wall -Wextra -pedantic  -I.  -c -o glyph.o glyph.c
+gcc -Wall -Wextra -pedantic  -I.  -c -o music.o music.c
+gcc -Wall -Wextra -pedantic  -I.  -c -o parse.o parse.c
+parse.c: In function ‘set_k_acc’:
+parse.c:3912:13: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+ 3912 |    if (nacc >= sizeof accs) {
+      |             ^~
+parse.c: In function ‘get_color’:
+parse.c:4795:22: warning: format ‘%x’ expects argument of type ‘unsigned int *’, but argument 3 has type ‘int *’ [-Wformat=]
+ 4795 |   if (sscanf(p, "#%06x", &color) != 1
+      |                   ~~~^   ~~~~~~
+      |                      |   |
+      |                      |   int *
+      |                      unsigned int *
+      |                   %06x
+parse.c: In function ‘get_bar’:
+parse.c:3336:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3336 |   if (!cfmt.rbdbstop)
+      |      ^
+parse.c:3338:2: note: here
+ 3338 |  case (B_OBRA << 4) + B_BAR:
+      |  ^~~~
+parse.c: In function ‘clef_def’:
+parse.c:3844:24: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3844 |    s->u.clef.transpose = -7;
+      |    ~~~~~~~~~~~~~~~~~~~~^~~~
+parse.c:3845:3: note: here
+ 3845 |   case '+':
+      |   ^~~~
+parse.c:3849:24: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 3849 |    s->u.clef.transpose = 7;
+      |    ~~~~~~~~~~~~~~~~~~~~^~~
+parse.c:3850:3: note: here
+ 3850 |   case '-':
+      |   ^~~~
+gcc -Wall -Wextra -pedantic  -I.  -c -o subs.o subs.c
+subs.c: In function ‘tex_str’:
+subs.c:210:25: warning: format ‘%lx’ expects argument of type ‘long unsigned int *’, but argument 3 has type ‘long int *’ [-Wformat=]
+  210 |      i = sscanf(s, "#x%lx;%n", &v, &j);
+      |                       ~~^      ~~
+      |                         |      |
+      |                         |      long int *
+      |                         long unsigned int *
+      |                       %lx
+subs.c:262:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘226’ to ‘-30’ [-Woverflow]
+  262 |     *d++ = 0xe2;
+      |            ^~~~
+subs.c:263:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘153’ to ‘-103’ [-Woverflow]
+  263 |     *d++ = 0x99;
+      |            ^~~~
+subs.c:264:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘175’ to ‘-81’ [-Woverflow]
+  264 |     *d++ = 0xaf;
+      |            ^~~~
+subs.c:267:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘226’ to ‘-30’ [-Woverflow]
+  267 |     *d++ = 0xe2;
+      |            ^~~~
+subs.c:268:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘153’ to ‘-103’ [-Woverflow]
+  268 |     *d++ = 0x99;
+      |            ^~~~
+subs.c:269:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘173’ to ‘-83’ [-Woverflow]
+  269 |     *d++ = 0xad;
+      |            ^~~~
+subs.c:272:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘226’ to ‘-30’ [-Woverflow]
+  272 |     *d++ = 0xe2;
+      |            ^~~~
+subs.c:273:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘153’ to ‘-103’ [-Woverflow]
+  273 |     *d++ = 0x99;
+      |            ^~~~
+subs.c:274:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘174’ to ‘-82’ [-Woverflow]
+  274 |     *d++ = 0xae;
+      |            ^~~~
+subs.c:277:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘240’ to ‘-16’ [-Woverflow]
+  277 |     *d++ = 0xf0;
+      |            ^~~~
+subs.c:278:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘157’ to ‘-99’ [-Woverflow]
+  278 |     *d++ = 0x9d;
+      |            ^~~~
+subs.c:279:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘132’ to ‘-124’ [-Woverflow]
+  279 |     *d++ = 0x84;
+      |            ^~~~
+subs.c:280:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘170’ to ‘-86’ [-Woverflow]
+  280 |     *d++ = 0xaa;
+      |            ^~~~
+subs.c:283:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘240’ to ‘-16’ [-Woverflow]
+  283 |     *d++ = 0xf0;
+      |            ^~~~
+subs.c:284:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘157’ to ‘-99’ [-Woverflow]
+  284 |     *d++ = 0x9d;
+      |            ^~~~
+subs.c:285:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘132’ to ‘-124’ [-Woverflow]
+  285 |     *d++ = 0x84;
+      |            ^~~~
+subs.c:286:12: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘171’ to ‘-85’ [-Woverflow]
+  286 |     *d++ = 0xab;
+      |            ^~~~
+subs.c: In function ‘write_text’:
+subs.c:1000:23: warning: unused parameter ‘cmd’ [-Wunused-parameter]
+ 1000 | void write_text(char *cmd, char *s, int job)
+      |                 ~~~~~~^~~
+subs.c: In function ‘put_wline’:
+subs.c:1198:8: warning: unused parameter ‘right’ [-Wunused-parameter]
+ 1198 |    int right)
+      |    ~~~~^~~~~
+subs.c: In function ‘trim_title’:
+subs.c:1392:19: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+ 1392 |     if (strlen(q) > cfmt.titletrim - 2)
+      |                   ^
+gcc -Wall -Wextra -pedantic  -I.  -c -o svg.o svg.c
+svg.c:97:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+   97 |  " -2.7 -9.5 -1.5 -16.2 3 -21.5\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:117:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  117 |  " -71 12 -105 67 -59 124\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:120:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  120 |  " xlink:href=\"#utclef\"/>\n", D_utclef},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:123:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  123 |  " xlink:href=\"#utclef\"/>\n", D_utclef},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:137:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  137 |  " 0 38 -51 37 -51 0\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:140:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  140 |  " xlink:href=\"#ubclef\"/>\n", D_ubclef},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:143:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  143 |  " xlink:href=\"#ubclef\"/>\n", D_ubclef},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:169:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  169 |  " v-529\"/>\n"},
+      |  ^~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:172:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  172 |  " xlink:href=\"#ucclef\"/>\n", D_ucclef},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:175:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  175 |  " xlink:href=\"#ucclef\"/>\n", D_ucclef},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:177:1: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  177 | { "<path id=\"pclef\" d=\"m-2.7 9h5.4v-18h-5.4v18\" class=\"stroke\" stroke-width=\"1.4\"/>\n"},
+      | ^
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:180:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  180 |  " transform=\"rotate(-20)\" class=\"fill\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:187:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  187 |  " -2 -3.8 5 -7.6 7 -3.8\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:196:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  196 |  " 3.4 0 5.6 -1.5 5.6 -3\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:201:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  201 |  "</g>\n", D_HD},
+      |  ^~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:206:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  206 |  "</g>\n"},
+      |  ^~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:211:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  211 |  "</g>\n"},
+      |  ^~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:215:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  215 |  " 1.32 2.31 5.94 -0.33 4.62 -2.64\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:218:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  218 |  " x=\"-1.6\" y=\"-6\" width=\"3\" height=\"12\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:221:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  221 |  " x=\"-1.6\" y=\"-6\" width=\"3\" height=\"6\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:224:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  224 |  " x=\"-3.5\" y=\"-6\" width=\"7\" height=\"3\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:227:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  227 |  " x=\"-3.5\" y=\"-3\" width=\"7\" height=\"3\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:233:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  233 |  " l-3.1 -4.5 1.9 -5.1 -1.5 -3.5\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:238:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  238 |  " c0 2.7 4.3 2.4 5.9 0.6\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:243:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  243 |  "</g>\n", D_r8e},
+      |  ^~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:249:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  249 |  "</g>\n", D_r8e},
+      |  ^~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:256:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  256 |  "</g>\n", D_r8e},
+      |  ^~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:264:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  264 |  "</g>\n", D_r8e},
+      |  ^~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:273:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  273 |  "</g>\n", D_r8e},
+      |  ^~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:278:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  278 |  "</g>\n"},
+      |  ^~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:296:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  296 |  " v-114\"/>\n"},
+      |  ^~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:308:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  308 |  " -50 -60 -130 -4 -130 34\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:325:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  325 |  " v188\"/>\n"},
+      |  ^~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:344:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  344 |  " c-84 0 -118 -30 -158 -68\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:366:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  366 |  " -37 -60 -97 -4 -97 34\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:369:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  369 |  " xlink:href=\"#usharp\"/>\n", D_usharp},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:372:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  372 |  " xlink:href=\"#uflat\"/>\n", D_uflat},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:375:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  375 |  " xlink:href=\"#unat\"/>\n", D_unat},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:378:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  378 |  " xlink:href=\"#udblesharp\"/>\n", D_udblesharp},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:381:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  381 |  " xlink:href=\"#udbleflat\"/>\n", D_udbleflat},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:387:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  387 |  "</g>\n"},
+      |  ^~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:393:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  393 |  "</g>\n"},
+      |  ^~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:397:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  397 |  "</g>\n", D_ft0},
+      |  ^~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:404:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  404 |  "</g>\n"},
+      |  ^~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:408:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  408 |  "</g>\n", D_dsh0},
+      |  ^~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:413:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  413 |  "</g>\n", D_dsh0},
+      |  ^~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:423:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  423 |  " -0.5 -4.4 0.7 -7.5 3.5 -6.9\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:428:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  428 |  "</g>\n", D_csig},
+      |  ^~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:431:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  431 |  " d=\"M0 -7a5 5 0 0 1 0 -10a5 5 0 0 1 0 10\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:436:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  436 |  "</g>\n", D_pmsig},
+      |  ^~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:439:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  439 |  " d=\"M3 -8a5 5 0 1 1 0 -8\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:444:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  444 |  "</g>\n", D_imsig},
+      |  ^~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:446:1: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  446 | { "<path id=\"hl\" class=\"stroke\" d=\"m-6 0h12\"/>\n"},
+      | ^
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:448:1: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  448 | { "<path id=\"hl1\" class=\"stroke\" d=\"m-7 0h14\"/>\n"},
+      | ^
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:450:1: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  450 | { "<path id=\"hl2\" class=\"stroke\" d=\"m-9 0h18\"/>\n"},
+      | ^
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:452:1: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  452 | { "<path id=\"ghl\" class=\"stroke\" d=\"m-3.5 0h7\"/>\n"},
+      | ^
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:457:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  457 |  "</g>\n"},
+      |  ^~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:459:1: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  459 | { "<path id=\"srep\" class=\"fill\" d=\"M-1 6l11 -12h3l-11 12h-3\"/>\n"},
+      | ^
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:464:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  464 |  " M-7 6l11 -12h3l-11 12h-3\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:470:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  470 |  "</g>\n"},
+      |  ^~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:474:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  474 |  "</g>\n"},
+      |  ^~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:480:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  480 |  " 2.2 -2.2 2.1 2.9 0.7 -0.7\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:485:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  485 |  "</g>\n", D_umrd},
+      |  ^~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:490:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  490 |  " -5 8.5 -5.5 -4.5 -10 2\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:492:1: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  492 | { "<circle id=\"stc\" class=\"fill\" cx=\"0\" cy=\"-3\" r=\"1.2\"/>\n"},
+      | ^
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:497:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  497 |  " -2.1 5 -5.4 6.8 -7.6 6\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:499:1: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  499 | { "<path id=\"emb\" d=\"m-2.5 -3h5\" class=\"stroke\" stroke-width=\"1.2\" stroke-linecap=\"round\"/>\n"},
+      | ^
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:507:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  507 |  "</g>\n"},
+      |  ^~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:512:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  512 |  " c-1.3 -6 -10.4 -6 -11.7 0\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:517:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  517 |  " 2.6 -8.8\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:522:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  522 |  "</g>\n"},
+      |  ^~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:537:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  537 |  "</g>\n"},
+      |  ^~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:542:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  542 |  "</g>\n"},
+      |  ^~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:545:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  545 |  " d=\"m0 -0.5v-6m-3 3h6\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:548:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  548 |  " d=\"m0 0v18\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:551:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  551 |  " d=\"m0 0v12\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:554:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  554 |  " d=\"m0 0v6\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:557:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  557 |  " cx=\"0\" cy=\"-3\" r=\"2.5\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:563:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  563 |  "  M0 -5v6\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:569:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  569 |  "  M-2.5 -9v4\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:582:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  582 |  " -0.1 0.9 0.7 1.2 1.9 0.6\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:587:2: warning: missing initializer for field ‘defined’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  587 |  "</g>\n", D_turn},
+      |  ^~~~~~~~
+svg.c:86:7: note: ‘defined’ declared here
+   86 |  char defined;
+      |       ^~~~~~~
+svg.c:589:1: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  589 | { "<path id=\"wedge\" class=\"fill\" d=\"M0 -1l-1.5 -5h3l-1.5 5\"/>\n"},
+      | ^
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:595:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  595 |  " c-0.2 -0.8 -0.7 -0.7 -2.1 0.4z\"/>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:601:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  601 |  "</g>\n"},
+      |  ^~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:603:1: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  603 | { "<circle id=\"showerror\" r=\"30\" stroke=\"#ffc0c0\" stroke-width=\"2.5\" fill=\"none\"/>\n"},
+      | ^
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:607:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  607 |  " font-size=\"16\" font-weight=\"bold\">f</tspan>z</text>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:610:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  610 |  " x=\"-2\" y=\"-4\">tr</text>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:612:1: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  612 | { "<path id=\"marcato\" d=\"m-3 0l3 -7l3 7l-1.5 0l-1.8 -4.2l-1.7 4.2\"/>\n"},
+      | ^
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:615:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  615 |  " x=\"-10\" y=\"-4\">Ped</text>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c:618:2: warning: missing initializer for field ‘use’ of ‘struct <anonymous>’ [-Wmissing-field-initializers]
+  618 |  " x=\"-5\" y=\"-4\">*</text>\n"},
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+svg.c:85:7: note: ‘use’ declared here
+   85 |  char use;
+      |       ^~~
+svg.c: In function ‘svg_font_switch’:
+svg.c:723:16: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+  723 |  for (i = 0; i < sizeof font_gl / sizeof font_gl[0]; i++) {
+      |                ^
+svg.c: In function ‘svg_def_id’:
+svg.c:1513:16: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+ 1513 |  for (i = 0; i < sizeof def_tb / sizeof def_tb[0]; i++) {
+      |                ^
+svg.c: In function ‘svg_output’:
+svg.c:4612:22: warning: unused parameter ‘out’ [-Wunused-parameter]
+ 4612 | int svg_output(FILE *out, const char *fmt, ...)
+      |                ~~~~~~^~~
+svg.c: In function ‘ps_exec’:
+svg.c:2987:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 2987 |   if (strcmp(op, "L") == 0) {
+      |      ^
+svg.c:3003:2: note: here
+ 3003 |  case 'l':
+      |  ^~~~
+gcc -Wall -Wextra -pedantic  -I.  -c -o syms.o syms.c
+syms.c:511:2: warning: string length ‘8722’ is greater than the length ‘4095’ ISO C99 compilers are required to support [-Woverlength-strings]
+  511 |  "0 setlinecap 0 setlinejoin\n";
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+syms.c:796:2: warning: string length ‘6524’ is greater than the length ‘4095’ ISO C99 compilers are required to support [-Woverlength-strings]
+  796 |  " 12 0 RM 0 -16 RL stroke}!\n";
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -Wall -Wextra -pedantic  -o abcm2ps abcm2ps.o abcparse.o buffer.o deco.o draw.o format.o front.o glyph.o music.o parse.o subs.o svg.o syms.o -lm
